@@ -263,5 +263,5 @@ app.post("/api/orders", async (req: Request, res: Response): Promise<void> => {
 });
 
 app.listen(port, () => {
-  console.log(`🚀 Сервер запущен на http://localhost:${port}`);
+  console.log(`🚀 Сервер запущен на Server running on port 3500`);
 });
