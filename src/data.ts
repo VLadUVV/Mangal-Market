@@ -12,7 +12,8 @@ const dbPromise = open({
 const app: Express = express();
 const port = 3500;
 
-app.use(cors());
+app.use(cors({ origin: "http://vladuvv-mangal-market-ee97.twc1.net" }));
+
 app.use(express.json());
 
 // Интерфейс для CartItem
