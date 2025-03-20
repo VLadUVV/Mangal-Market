@@ -5,21 +5,22 @@ import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
   server: {
-    host: 'https://vladuvv-mangal-market-ee97.twc1.net',         
+    host: 'true',         
     port: 3000,
     proxy: {
       '/api': {
-        target: 'https://vladuvv-mangal-market-ee97.twc1.net', // Заменяем localhost на 0.0.0.0
+        target: 'https://vladuvv-mangal-market-ee97.twc1.net', 
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
+    allowedHosts: ['vladuvv-mangal-market-ee97.twc1.net'],
   },
   
   plugins: [
     react(),
-    mode !== 'production' && componentTagger(), // Более надежная проверка
+    mode !== 'production' && componentTagger(), 
   ].filter(Boolean),
   
   resolve: {
