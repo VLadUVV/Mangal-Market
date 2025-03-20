@@ -263,6 +263,6 @@ app.post("/api/orders", async (req: Request, res: Response): Promise<void> => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`🚀 Сервер запущен на Server running on port 3500`);
+app.listen(port, "0.0.0.0", () => {
+  console.log(`🚀 Сервер запущен на https://vladuvv-mangal-market-ee97.twc1.net:${port}`);
 });

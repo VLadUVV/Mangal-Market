@@ -5,11 +5,11 @@ import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
   server: {
-    host: '0.0.0.0',         
+    host: 'https://vladuvv-mangal-market-ee97.twc1.net',         
     port: 3000,
     proxy: {
       '/api': {
-        target: 'http://0.0.0.0:3500', // Заменяем localhost на 0.0.0.0
+        target: 'https://vladuvv-mangal-market-ee97.twc1.net', // Заменяем localhost на 0.0.0.0
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, ''),
