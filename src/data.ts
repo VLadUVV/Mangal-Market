@@ -263,6 +263,11 @@ app.post("/api/orders", async (req: Request, res: Response): Promise<void> => {
   }
 });
 
+app.get("/", (req: Request, res: Response) => {
+  res.send("Сервер работает! Доступные API-эндпоинты находятся на /api");
+});
+
+
 app.listen(port, "0.0.0.0", () => {
   console.log(`🚀 Сервер запущен на https://vladuvv-mangal-market-ee97.twc1.net:${port}`);
 });
